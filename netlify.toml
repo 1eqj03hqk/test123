@@ -1,0 +1,5 @@
+[build]
+  command = "npm run build:rebuild-spec"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
