@@ -1,0 +1,11 @@
+name: Trigger Netlify Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger netlify build hook
+        run: curl -X POST -d '{}' https://api.netlify.com/build_hooks/686ef05bd6b9682631a06acc
