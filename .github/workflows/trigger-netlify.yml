@@ -7,8 +7,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger netlify build hook
+      - name: Call Netlify build hook with payload
         run: |
-          curl -X POST -H "Content-Type: application/json" \
-            -d '{"trigger_branch":"main","env":{"REBUILD_SPEC":"true"}}' \
+          curl -X POST \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            --data "REBUILD_SPEC=true" \
             https://api.netlify.com/build_hooks/686f025c6cf5570547a62f91
+
