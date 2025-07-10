@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 if (process.env.INCOMING_HOOK_BODY?.includes('REBUILD_SPEC=true')) {
   process.env.REBUILD_SPEC = 'true';
 }
-console.log('the incoming hook body is... :' process.env.INCOMING_HOOK_BODY)
+console.log('the incoming hook body is... :' ,process.env.INCOMING_HOOK_BODY)
 if (process.env.REBUILD_SPEC === 'true') {
   console.log('[build] REBUILD_SPEC=true → Running preprocessor');
   execSync('node src/scripts/openapi-preprocessor.js', { stdio: 'inherit' });
