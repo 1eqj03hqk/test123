@@ -12,5 +12,5 @@ jobs:
           curl -X POST \
             -H "Content-Type: application/x-www-form-urlencoded" \
             --data "REBUILD_SPEC=true" \
-            https://api.netlify.com/build_hooks/686f025c6cf5570547a62f91
+            https://api.netlify.com/build_hooks/686f074c6cf55711c4a62e68
 
